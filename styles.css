@@ -21,10 +21,14 @@ body {
     color: var(--text-primary);
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* Fix: Stack items vertically */
     align-items: center;
+    /* Fix: Center items horizontally */
     overflow-x: hidden;
     position: relative;
+    padding-top: 100px;
+    /* Space for navbar */
 }
 
 /* Dynamic Background Animation */
@@ -198,6 +202,8 @@ h1 {
     margin-top: 40px;
     color: rgba(148, 163, 184, 0.5);
     font-size: 0.85rem;
+    width: 100%;
+    text-align: center;
 }
 
 /* Animation */
@@ -250,7 +256,8 @@ h1 {
 }
 
 .nav-glass {
-    background: rgba(15, 23, 42, 0.6); /* Semi-transparent background */
+    background: rgba(15, 23, 42, 0.6);
+    /* Semi-transparent background */
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -290,9 +297,12 @@ h1 {
 
 /* Adjust body for fixed navbar */
 body {
-    padding-top: 100px; /* Give space for navbar */
-    align-items: flex-start; /* Allow page to flow naturally */
-    overflow-y: auto; /* Enable scrolling */
+    padding-top: 100px;
+    /* Give space for navbar */
+    align-items: flex-start;
+    /* Allow page to flow naturally */
+    overflow-y: auto;
+    /* Enable scrolling */
 }
 
 /* ===========================
@@ -300,7 +310,8 @@ body {
    =========================== */
 .page-container {
     width: 100%;
-    max-width: 800px; /* Wider for resume/tools */
+    max-width: 800px;
+    /* Wider for resume/tools */
     margin: 0 auto 40px;
     padding: 0 20px;
 }
