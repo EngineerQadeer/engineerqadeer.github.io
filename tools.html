@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools & Projects | Engineer Qadeer</title>
+    <meta name="description" content="Software tools and projects utilized and created by Engineer Qadeer.">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-glass">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="resume.html" class="nav-link">Resume</a>
+            <a href="tools.html" class="nav-link active">Tools</a>
+        </div>
+    </nav>
+
+    <div class="background-animation"></div>
+
+    <main class="page-container">
+        <div class="profile-card glass" style="min-height: 80vh; display: flex; flex-direction: column;">
+            <div class="profile-header">
+                <h1>My Tools</h1>
+                <p class="tagline">Automation & Utilities</p>
+                <div class="bio">
+                    <p>A collection of tools I've built to automate tasks, scrape data, and solve problems.</p>
+                </div>
+            </div>
+
+            <div class="tools-grid">
+                <!-- Udemy Scraper Tool -->
+                <a href="https://engineerqadeer.github.io/Udemy-Scraper/" target="_blank" class="tool-card glass"
+                    style="border: 1px solid rgba(56, 189, 248, 0.3); background: rgba(15, 23, 42, 0.4);">
+                    <i class="fa-solid fa-robot tool-icon"></i>
+                    <h3 class="tool-title">Udemy Scraper</h3>
+                    <p class="tool-desc">
+                        A powerful tool to scrape course data from Udemy. Automates the extraction of course details,
+                        ratings, and meta-data for analysis.
+                    </p>
+                    <div class="tool-link">
+                        Launch Tool <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                </a>
+
+                <!-- Placeholder for future tools -->
+                <div class="tool-card glass" style="opacity: 0.7;">
+                    <i class="fa-solid fa-code-branch tool-icon" style="color: var(--text-secondary);"></i>
+                    <h3 class="tool-title" style="color: var(--text-secondary);">More Coming Soon</h3>
+                    <p class="tool-desc">
+                        I am currently working on new security and automation tools. Stay tuned!
+                    </p>
+                </div>
+            </div>
+
+            <footer class="footer" style="margin-top: auto;">
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> Engineer Qadeer. All Rights Reserved.
+                </p>
+            </footer>
+        </div>
+    </main>
+
+</body>
+
+</html>
