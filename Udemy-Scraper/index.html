@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ZapLogic - Automatically scrape and collect free Udemy coupon links. Empowering students with free education.">
+  <meta name="keywords" content="ZapLogic, Udemy, coupons, scraper, free courses, DiscUdemy, cybersecurity, automation">
+  <meta name="author" content="Engineer Qadeer">
+  <title>ZapLogic | Udemy Coupon Scraper</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <a href="index.html" class="brand-logo">
+        <!-- ZapLogic Cyber Variant 1 SVG Logo -->
+        <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Hexagon Shield Background -->
+          <path d="M50 5 L93.3 30 V75 L50 100 L6.7 75 V30 L50 5Z" 
+                stroke="#A064FF" stroke-width="4" fill="#0F1117" />
+          
+          <!-- Circuit Lines (Left) -->
+          <path d="M6.7 30 L30 45" stroke="#4D9EFF" stroke-width="2" opacity="0.8"/>
+          <circle cx="30" cy="45" r="3" fill="#FF4D9E" />
+          
+          <!-- Circuit Lines (Right) -->
+          <path d="M93.3 75 L70 60" stroke="#4D9EFF" stroke-width="2" opacity="0.8"/>
+          <circle cx="70" cy="60" r="3" fill="#FF4D9E" />
+          
+          <!-- Lightning Bolt (Center) -->
+          <path d="M55 20 L35 50 H50 L45 80 L65 50 H50 L55 20Z" 
+                fill="url(#boltGradient)" 
+                stroke="#4D9EFF" stroke-width="1" />
+          
+          <!-- Gradients -->
+          <defs>
+            <linearGradient id="boltGradient" x1="35" y1="20" x2="65" y2="80" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#4D9EFF"/>
+              <stop offset="100%" stop-color="#A064FF"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="brand-name">ZapLogic</span>
+      </a>
+      
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link" style="color: var(--zap-blue);">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="privacy.html" class="nav-link">Privacy Policy</a>
+      </div>
+    </nav>
+
+    <!-- Header Content -->
+    <header class="header">
+      <h1>🎓 Udemy Coupon Scraper</h1>
+      <p>Powered by <span style="color: var(--zap-purple); font-weight: 600;">ZapLogic</span> Intelligence</p>
+    </header>
+
+    <!-- Control Panel -->
+    <section class="control-panel glass-card">
+      <h2>⚙️ Scraper Settings</h2>
+      
+      <div class="input-group">
+        <div class="input-wrapper">
+          <label for="corsProxy">CORS Proxy</label>
+          <select id="corsProxy">
+            <option value="https://api.allorigins.win/raw?url=">AllOrigins (Recommended)</option>
+            <option value="https://corsproxy.io/?">CorsProxy.io</option>
+            <option value="https://api.codetabs.com/v1/proxy?quest=">CodeTabs</option>
+            <option value="https://cors-anywhere.herokuapp.com/">CORS Anywhere</option>
+            <option value="">Direct (May not work due to CORS)</option>
+          </select>
+          <small style="color: var(--color-text-muted); margin-top: 5px; display: block;">Select a proxy to bypass CORS restrictions</small>
+        </div>
+      </div>
+      
+      <div class="input-group">
+        <div class="input-wrapper">
+          <label for="startPage">Start Page</label>
+          <input type="number" id="startPage" min="1" value="1" placeholder="1">
+        </div>
+        
+        <div class="input-wrapper">
+          <label for="endPage">End Page</label>
+          <input type="number" id="endPage" min="1" value="3" placeholder="3">
+        </div>
+      </div>
+      
+      <div class="button-group">
+        <button id="startBtn" class="btn btn-primary">🚀 Start Scraping</button>
+        <button id="stopBtn" class="btn btn-secondary" disabled>⏹️ Stop</button>
+      </div>
+    </section>
+
+    <!-- Progress Section -->
+    <section id="progressSection" class="progress-section glass-card">
+      <h2>📊 Progress</h2>
+      
+      <div class="progress-info">
+        <span class="progress-percentage" id="progressPercentage">0%</span>
+        <span class="progress-status" id="progressStatus">Initializing...</span>
+      </div>
+      
+      <div class="progress-bar-container">
+        <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+      </div>
+      
+      <div id="statusMessages"></div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="resultsSection" class="results-section glass-card">
+      <div class="results-header">
+        <h2>✨ Results</h2>
+        <span class="results-count" id="resultsCount">0 coupons found</span>
+      </div>
+      
+      <div class="table-container">
+        <table class="results-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Coupon Link</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="resultsTableBody">
+            <!-- Results will be inserted here -->
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="button-group">
+        <button id="copyAllBtn" class="btn btn-primary">📋 Copy All Links</button>
+        <button id="downloadBtn" class="btn btn-secondary">💾 Download as TXT</button>
+      </div>
+    </section>
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <div class="social-links">
+        <a href="https://github.com/EngineerQadeer" target="_blank" class="social-btn github" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://github.com/ZapLogic" target="_blank" class="social-btn github" title="ZapLogic GitHub">
+          <i class="fas fa-code-branch"></i>
+        </a>
+        <a href="https://www.youtube.com/@Engineer.Qadeer" target="_blank" class="social-btn youtube" title="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.facebook.com/Engineer.Qadeer" target="_blank" class="social-btn facebook" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/Engineer.Qadeer" target="_blank" class="social-btn instagram" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://linktr.ee/Engineer.Qadeer" target="_blank" class="social-btn linktree" title="Linktree">
+          <i class="fas fa-link"></i>
+        </a>
+      </div>
+      
+      <p class="footer-text">
+        &copy; <span id="currentYear"></span> <span class="footer-brand">ZapLogic</span>. All rights reserved.
+      </p>
+      <p class="footer-text" style="font-size: 0.8rem;">
+        Built with ❤️ by <a href="https://github.com/EngineerQadeer" style="color: var(--zap-blue); text-decoration: none;">Engineer Qadeer</a>
+      </p>
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <script>
+    // Set current year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const navLinkItems = document.querySelectorAll('.nav-link');
+    
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+    }
+    
+    // Auto-close menu when clicking any nav link
+    navLinkItems.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navLinks.classList.contains('active')) {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

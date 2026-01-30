@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About ZapLogic - Empowering students with free education through automation.">
+    <meta name="keywords" content="ZapLogic, About, Mission, Education, Automation">
+    <meta name="author" content="Engineer Qadeer">
+    <title>About Us | ZapLogic</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <a href="index.html" class="brand-logo">
+                <!-- ZapLogic Cyber Variant 1 SVG Logo -->
+                <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 5 L93.3 30 V75 L50 100 L6.7 75 V30 L50 5Z" stroke="#A064FF" stroke-width="4"
+                        fill="#0F1117" />
+                    <path d="M6.7 30 L30 45" stroke="#4D9EFF" stroke-width="2" opacity="0.8" />
+                    <circle cx="30" cy="45" r="3" fill="#FF4D9E" />
+                    <path d="M93.3 75 L70 60" stroke="#4D9EFF" stroke-width="2" opacity="0.8" />
+                    <circle cx="70" cy="60" r="3" fill="#FF4D9E" />
+                    <path d="M55 20 L35 50 H50 L45 80 L65 50 H50 L55 20Z" fill="url(#boltGradient)" stroke="#4D9EFF"
+                        stroke-width="1" />
+                    <defs>
+                        <linearGradient id="boltGradient" x1="35" y1="20" x2="65" y2="80"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#4D9EFF" />
+                            <stop offset="100%" stop-color="#A064FF" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="brand-name">ZapLogic</span>
+            </a>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link" style="color: var(--zap-blue);">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="privacy.html" class="nav-link">Privacy Policy</a>
+            </div>
+        </nav>
+
+        <!-- Header Content -->
+        <header class="header">
+            <h1>About ZapLogic</h1>
+            <p>Empowering Education Through Automation</p>
+        </header>
+
+        <!-- Main Content -->
+        <section class="glass-card" style="margin-bottom: 2rem;">
+            <h2>Our Mission</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--color-text-secondary);">
+                At ZapLogic, we believe that education should be accessible to everyone. Our mission is to bridge the
+                gap between eager learners and premium educational content by leveraging the power of automation.
+            </p>
+
+            <h2>What We Do</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--color-text-secondary);">
+                We build intelligent tools that scour the web for 100% free Udemy coupons. Our advanced scraper
+                technology identifies, verifies, and aggregates the best course deals, saving you time and money while
+                expanding your knowledge base.
+            </p>
+
+            <h2>The Technology</h2>
+            <p style="color: var(--color-text-secondary);">
+                Built with modern web technologies and sophisticated scraping algorithms, ZapLogic represents the
+                intersection of efficiency and utility. We prioritize user privacy, speed, and reliability in every tool
+                we create.
+            </p>
+        </section>
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="social-links">
+                <a href="https://github.com/EngineerQadeer" target="_blank" class="social-btn github" title="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://github.com/ZapLogic" target="_blank" class="social-btn github"
+                    title="ZapLogic GitHub"><i class="fas fa-code-branch"></i></a>
+                <a href="https://www.youtube.com/@Engineer.Qadeer" target="_blank" class="social-btn youtube"
+                    title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/Engineer.Qadeer" target="_blank" class="social-btn facebook"
+                    title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/Engineer.Qadeer" target="_blank" class="social-btn instagram"
+                    title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://linktr.ee/Engineer.Qadeer" target="_blank" class="social-btn linktree"
+                    title="Linktree"><i class="fas fa-link"></i></a>
+            </div>
+
+            <p class="footer-text">
+                &copy; <span id="currentYear"></span> <span class="footer-brand">ZapLogic</span>. All rights reserved.
+            </p>
+            <p class="footer-text" style="font-size: 0.8rem;">
+                Built with ❤️ by <a href="https://github.com/EngineerQadeer"
+                    style="color: var(--zap-blue); text-decoration: none;">Engineer Qadeer</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const navLinkItems = document.querySelectorAll('.nav-link');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        // Auto-close menu when clicking any nav link
+        navLinkItems.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

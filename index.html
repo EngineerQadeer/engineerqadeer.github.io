@@ -4,139 +4,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engineer Qadeer | Official Portfolio & Social Links</title>
     <meta name="description"
-        content="Official central hub for Engineer Qadeer. Connect with me on GitHub, YouTube, TikTok, Instagram, and Facebook. Software Engineering & Content Creation.">
+        content="Engineer Qadeer - Security Researcher, Software Engineer, and Content Creator. Building tools and breaking systems to make them secure.">
     <meta name="keywords"
-        content="Engineer Qadeer, Engineer.Qadeer, EngineerQadeer, Software Engineer, Content Creator, Tech">
-    <meta name="author" content="Engineer Qadeer">
+        content="Engineer Qadeer, Security Researcher, Software Engineer, Bug Bounty, Reverse Engineering, Pakistan">
+    <meta name="author" content="Abdul Qadeer">
+    <title>Engineer Qadeer | Security Researcher & Developer</title>
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://engineerqadeer.github.io/">
-    <meta property="og:title" content="Engineer Qadeer | Official Portfolio">
-    <meta property="og:description" content="Connect with Engineer Qadeer across all platforms.">
+    <meta property="og:title" content="Engineer Qadeer | Security Researcher & Developer">
+    <meta property="og:description" content="Building tools and breaking systems to make them secure.">
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/193400025?v=4">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://engineerqadeer.github.io/">
-    <meta property="twitter:title" content="Engineer Qadeer | Official Portfolio">
-    <meta property="twitter:description" content="Connect with Engineer Qadeer across all platforms.">
-    <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/193400025?v=4">
-
-    <link rel="stylesheet" href="styles.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome for Icons -->
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- CRITICAL SEO: Schema.org Structured Data to link all profiles -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Engineer Qadeer",
-      "alternateName": ["Engineer.Qadeer", "EngineerQadeer"],
-      "url": "https://engineerqadeer.github.io/",
-      "image": "https://avatars.githubusercontent.com/u/193400025?v=4",
-      "sameAs": [
-        "https://www.instagram.com/engineer.qadeer/",
-        "https://www.facebook.com/Engineer.Qadeer",
-        "https://github.com/EngineerQadeer",
-        "https://www.youtube.com/@Engineer.Qadeer",
-        "https://www.tiktok.com/@enginer.qadeer"
-      ],
-      "jobTitle": "Software Engineer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Self-Employed"
-      }
-    }
-    </script>
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Engineer Qadeer",
+    "alternateName": ["Abdul Qadeer", "EngineerQadeer"],
+    "url": "https://engineerqadeer.github.io/",
+    "image": "https://avatars.githubusercontent.com/u/193400025?v=4",
+    "sameAs": [
+      "https://www.instagram.com/engineer.qadeer/",
+      "https://www.facebook.com/Engineer.Qadeer",
+      "https://github.com/EngineerQadeer",
+      "https://www.youtube.com/@Engineer.Qadeer",
+      "https://www.tiktok.com/@enginer.qadeer"
+    ],
+    "jobTitle": "Security Researcher"
+  }
+  </script>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-glass">
-            <a href="index.html" class="nav-link active">Home</a>
-            <a href="resume.html" class="nav-link">Resume</a>
-            <a href="tools.html" class="nav-link">Tools</a>
-        </div>
-    </nav>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <a href="index.html" class="brand-logo">
+                <!-- Logo SVG -->
+                <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 5 L93.3 30 V75 L50 100 L6.7 75 V30 L50 5Z" stroke="#A064FF" stroke-width="4"
+                        fill="#0F1117" />
+                    <path d="M6.7 30 L30 45" stroke="#4D9EFF" stroke-width="2" opacity="0.8" />
+                    <circle cx="30" cy="45" r="3" fill="#FF4D9E" />
+                    <path d="M93.3 75 L70 60" stroke="#4D9EFF" stroke-width="2" opacity="0.8" />
+                    <circle cx="70" cy="60" r="3" fill="#FF4D9E" />
+                    <path d="M55 20 L35 50 H50 L45 80 L65 50 H50 L55 20Z" fill="url(#boltGrad)" stroke="#4D9EFF"
+                        stroke-width="1" />
+                    <defs>
+                        <linearGradient id="boltGrad" x1="35" y1="20" x2="65" y2="80" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#4D9EFF" />
+                            <stop offset="100%" stop-color="#A064FF" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="brand-name">Engineer Qadeer</span>
+            </a>
 
-    <div class="background-animation"></div>
-
-    <main class="container">
-        <div class="profile-card glass">
-            <div class="profile-header">
-                <div class="profile-image-container">
-                    <img src="https://avatars.githubusercontent.com/u/193400025?v=4" alt="Engineer Qadeer"
-                        class="profile-img">
-                </div>
-                <h1>Engineer Qadeer</h1>
-                <p class="tagline">Innovating Tech & content</p>
-                <div class="bio">
-                    <p>Welcome to my official digital hub. I bridge the gap between complex engineering and accessible
-                        tech content. Follow my journey across all platforms.</p>
-                </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
 
-            <div class="links-grid">
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/engineer.qadeer/" target="_blank" rel="noopener noreferrer"
-                    class="social-link instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                    <span>Instagram</span>
-                    <small>@engineer.qadeer</small>
-                </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+                <a href="tools.html" class="nav-link">Tools</a>
+            </div>
+        </nav>
 
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/Engineer.Qadeer" target="_blank" rel="noopener noreferrer"
-                    class="social-link facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                    <span>Facebook</span>
-                    <small>@Engineer.Qadeer</small>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero-title">Abdul Qadeer</h1>
+            <p class="hero-subtitle">
+                Security Researcher & Software Engineer. I build tools and break systems to make them more secure.
+            </p>
+            <div class="hero-cta">
+                <a href="resume.html" class="btn btn-primary">
+                    <i class="fas fa-file-alt"></i> View Resume
                 </a>
-
-                <!-- GitHub -->
-                <a href="https://github.com/EngineerQadeer" target="_blank" rel="noopener noreferrer"
-                    class="social-link github">
-                    <i class="fa-brands fa-github"></i>
-                    <span>GitHub</span>
-                    <small>@EngineerQadeer</small>
+                <a href="tools.html" class="btn btn-secondary">
+                    <i class="fas fa-tools"></i> My Tools
                 </a>
+            </div>
+        </section>
 
-                <!-- YouTube -->
-                <a href="https://www.youtube.com/@Engineer.Qadeer" target="_blank" rel="noopener noreferrer"
-                    class="social-link youtube">
-                    <i class="fa-brands fa-youtube"></i>
-                    <span>YouTube</span>
-                    <small>@Engineer.Qadeer</small>
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stat-card glass-card">
+                <div class="stat-icon">🎓</div>
+                <div class="stat-number">BSCS</div>
+                <div class="stat-label">Final Year Student</div>
+            </div>
+            <div class="stat-card glass-card">
+                <div class="stat-icon">🔒</div>
+                <div class="stat-number">Security</div>
+                <div class="stat-label">Bug Bounty Hunter</div>
+            </div>
+            <div class="stat-card glass-card">
+                <div class="stat-icon">🛠️</div>
+                <div class="stat-number">Tools</div>
+                <div class="stat-label">Automation & Scraping</div>
+            </div>
+            <div class="stat-card glass-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-number">Goal</div>
+                <div class="stat-label">MS in China</div>
+            </div>
+        </section>
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="social-links">
+                <a href="https://github.com/EngineerQadeer" target="_blank" class="social-btn github" title="GitHub">
+                    <i class="fab fa-github"></i>
                 </a>
-
-                <!-- TikTok -->
-                <a href="https://www.tiktok.com/@enginer.qadeer" target="_blank" rel="noopener noreferrer"
-                    class="social-link tiktok">
-                    <i class="fa-brands fa-tiktok"></i>
-                    <span>TikTok</span>
-                    <small>@enginer.qadeer</small>
+                <a href="https://www.youtube.com/@Engineer.Qadeer" target="_blank" class="social-btn youtube"
+                    title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.facebook.com/Engineer.Qadeer" target="_blank" class="social-btn facebook"
+                    title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/engineer.qadeer" target="_blank" class="social-btn instagram"
+                    title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@enginer.qadeer" target="_blank" class="social-btn tiktok"
+                    title="TikTok">
+                    <i class="fab fa-tiktok"></i>
                 </a>
             </div>
 
-            <footer class="footer">
-                <p>&copy;
-                    <script>document.write(new Date().getFullYear())</script> Engineer Qadeer. All Rights Reserved.
-                </p>
-            </footer>
-        </div>
-    </main>
+            <p class="footer-text">
+                &copy; <span id="currentYear"></span> <span class="footer-brand">Engineer Qadeer</span>. All rights
+                reserved.
+            </p>
+            <p class="footer-text" style="font-size: 0.8rem;">
+                Building the future, one line of code at a time.
+            </p>
+        </footer>
+    </div>
 
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        // Auto-close menu on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -4,137 +4,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume | Engineer Qadeer</title>
     <meta name="description"
         content="Resume and Professional Experience of Engineer Qadeer - Security Researcher & Software Engineer.">
-    <link rel="stylesheet" href="styles.css">
+    <title>Resume | Engineer Qadeer</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-glass">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="resume.html" class="nav-link active">Resume</a>
-            <a href="tools.html" class="nav-link">Tools</a>
-        </div>
-    </nav>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <a href="index.html" class="brand-logo">
+                <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 5 L93.3 30 V75 L50 100 L6.7 75 V30 L50 5Z" stroke="#A064FF" stroke-width="4"
+                        fill="#0F1117" />
+                    <path d="M6.7 30 L30 45" stroke="#4D9EFF" stroke-width="2" opacity="0.8" />
+                    <circle cx="30" cy="45" r="3" fill="#FF4D9E" />
+                    <path d="M93.3 75 L70 60" stroke="#4D9EFF" stroke-width="2" opacity="0.8" />
+                    <circle cx="70" cy="60" r="3" fill="#FF4D9E" />
+                    <path d="M55 20 L35 50 H50 L45 80 L65 50 H50 L55 20Z" fill="url(#boltGrad2)" stroke="#4D9EFF"
+                        stroke-width="1" />
+                    <defs>
+                        <linearGradient id="boltGrad2" x1="35" y1="20" x2="65" y2="80" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#4D9EFF" />
+                            <stop offset="100%" stop-color="#A064FF" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="brand-name">Engineer Qadeer</span>
+            </a>
 
-    <div class="background-animation"></div>
-
-    <main class="page-container">
-        <div class="profile-card glass" style="text-align: left;">
-            <div class="profile-header" style="text-align: center; margin-bottom: 40px;">
-                <h1>Professional Resume</h1>
-                <p class="tagline">Security Researcher & Software Engineer</p>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
 
-            <!-- Summary -->
-            <div class="bio">
-                <p>
-                    Final-year Computer Science student with a deep passion for <strong>Cyber Security</strong> and
-                    <strong>Reverse Engineering</strong>.
-                    I bridge the gap between building software and breaking it to make it more secure.
-                    Currently focused on Bug Bounties and planning for an MS in Computer Science in China.
-                    My goal is to work as a Security Engineer at a top-tier tech company.
-                </p>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="resume.html" class="nav-link active">Resume</a>
+                <a href="tools.html" class="nav-link">Tools</a>
             </div>
+        </nav>
 
-            <!-- Technical Skills -->
-            <h2 class="section-title"><i class="fa-solid fa-code"></i> Technical Arsenal</h2>
-            <div class="resume-item" style="border: none; padding: 0;">
-                <div style="margin-bottom: 15px;">
-                    <h3 class="resume-role" style="font-size: 1rem;">Core Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C# .NET</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">JavaScript</span>
-                    </div>
+        <!-- Page Header -->
+        <header class="page-header">
+            <h1>🎓 Professional Resume</h1>
+            <p>Security Researcher & Software Engineer</p>
+        </header>
+
+        <!-- Resume Content -->
+        <section class="resume-section glass-card">
+            <h2 class="section-title"><i class="fas fa-user"></i> Summary</h2>
+            <p style="color: var(--color-text-secondary); line-height: 1.8;">
+                Final-year BSCS student with a deep passion for <strong style="color: var(--zap-purple);">Cyber
+                    Security</strong> and <strong style="color: var(--zap-blue);">Reverse Engineering</strong>. I bridge
+                the gap between building software and breaking it to make it more secure. Currently focused on Bug
+                Bounties and planning for an MS in Computer Science in China. My goal is to work as a Security Engineer
+                at a top-tier tech company.
+            </p>
+        </section>
+
+        <section class="resume-section glass-card">
+            <h2 class="section-title"><i class="fas fa-code"></i> Technical Skills</h2>
+            <div style="margin-bottom: 20px;">
+                <h4 style="color: var(--color-text-secondary); margin-bottom: 10px;">Languages</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C# .NET</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">JavaScript</span>
                 </div>
-                <div>
-                    <h3 class="resume-role" style="font-size: 1rem;">Security & Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Reverse Engineering</span>
-                        <span class="skill-tag">Web Security</span>
-                        <span class="skill-tag">Android Security</span>
-                        <span class="skill-tag">Automation</span>
-                        <span class="skill-tag">Burp Suite</span>
-                    </div>
+            </div>
+            <div>
+                <h4 style="color: var(--color-text-secondary); margin-bottom: 10px;">Security & Tools</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Reverse Engineering</span>
+                    <span class="skill-tag">Web Security</span>
+                    <span class="skill-tag">Android Security</span>
+                    <span class="skill-tag">Burp Suite</span>
+                    <span class="skill-tag">Automation</span>
                 </div>
             </div>
+        </section>
 
-            <!-- Education -->
-            <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+        <section class="resume-section glass-card">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
             <div class="resume-item">
                 <div class="resume-date">2020 - Present (Final Semester)</div>
                 <div class="resume-role">BS Computer Science</div>
                 <div class="resume-place">Pakistan</div>
-                <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                    Focusing on Systems Programming, Data Structures, and Artificial Intelligence.
+                <p class="resume-desc">Focusing on Systems Programming, Data Structures, and Artificial Intelligence.
                 </p>
             </div>
-            <!-- Future Plan -->
             <div class="resume-item">
                 <div class="resume-date">Upcoming</div>
                 <div class="resume-role">MS in Computer Science</div>
                 <div class="resume-place">China (Planned)</div>
-                <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                    Targeting advanced research in Cyber Security and AI.
-                </p>
+                <p class="resume-desc">Targeting advanced research in Cyber Security and AI.</p>
             </div>
+        </section>
 
-            <!-- Projects / Experience -->
-            <h2 class="section-title"><i class="fa-solid fa-laptop-code"></i> Projects & Experience</h2>
-
+        <section class="resume-section glass-card">
+            <h2 class="section-title"><i class="fas fa-laptop-code"></i> Projects & Experience</h2>
             <div class="resume-item">
                 <div class="resume-date">Ongoing</div>
                 <div class="resume-role">Independent Security Researcher</div>
                 <div class="resume-place">Bug Bounties</div>
-                <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                    Analyzing web and mobile applications for vulnerabilities. documenting findings, and reporting
-                    security issues.
-                </p>
+                <p class="resume-desc">Analyzing web and mobile applications for vulnerabilities, documenting findings,
+                    and reporting security issues.</p>
             </div>
-
             <div class="resume-item">
                 <div class="resume-date">2024 - Present</div>
                 <div class="resume-role">Oracle to .NET Migration Lead</div>
                 <div class="resume-place">Freelance Project</div>
-                <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                    Migrating a legacy Healthcare Management System (Oracle Forms 6i) to a modern C# .NET 8.0 Windows
-                    Forms architecture, ensuring data integrity and UI modernization.
-                </p>
+                <p class="resume-desc">Migrating a legacy Healthcare Management System (Oracle Forms 6i) to C# .NET 8.0
+                    Windows Forms architecture.</p>
             </div>
-
             <div class="resume-item">
                 <div class="resume-date">Open Source</div>
                 <div class="resume-role">Automation Tools Developer</div>
                 <div class="resume-place">GitHub</div>
-                <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                    Created 'Udemy Scraper' and various university portal automation scripts solving complex CAPTCHA and
-                    session handling challenges.
-                </p>
+                <p class="resume-desc">Created 'Udemy Scraper' and various university portal automation scripts solving
+                    complex CAPTCHA and session handling challenges.</p>
+            </div>
+        </section>
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="social-links">
+                <a href="https://github.com/EngineerQadeer" target="_blank" class="social-btn github" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.youtube.com/@Engineer.Qadeer" target="_blank" class="social-btn youtube"
+                    title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.facebook.com/Engineer.Qadeer" target="_blank" class="social-btn facebook"
+                    title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/engineer.qadeer" target="_blank" class="social-btn instagram"
+                    title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@enginer.qadeer" target="_blank" class="social-btn tiktok"
+                    title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
             </div>
 
-        </div>
-    </main>
+            <p class="footer-text">
+                &copy; <span id="currentYear"></span> <span class="footer-brand">Engineer Qadeer</span>. All rights
+                reserved.
+            </p>
+        </footer>
+    </div>
 
-    <footer class="footer" style="text-align: center; margin-bottom: 20px;">
-        <p>&copy;
-            <script>document.write(new Date().getFullYear())</script> Engineer Qadeer. All Rights Reserved.
-        </p>
-    </footer>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
 
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
